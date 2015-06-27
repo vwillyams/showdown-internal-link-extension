@@ -28,5 +28,13 @@ describe('tests', function() {
       done();
     });
 
+    it("escapes html characters both for display and for text", function(done){
+      var markdown = "[[this  is&a ! diffi\'cult /link ]]";
+      var converted = converter.makeHtml(markdown);
+
+      expect(converted).to.eql('<p><a href="this__is&amp;a_!_diffi&#39;cult_&#47;link_">this  is&amp;a ! diffi&#39;cult &#47;link </a></p>');
+      done();
+    })
+
   });
 });
