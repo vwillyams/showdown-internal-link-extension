@@ -30,7 +30,7 @@ var converter = new showdown.Converter({extensions: [linkFilter]});
 
 ```javascript
 require('../showdown-intlink-filter').config({
-  pathPrefix : '/images',
+  pathPrefix : '/images/',
   pathSuffix : '.jpg'
 };
 ```
