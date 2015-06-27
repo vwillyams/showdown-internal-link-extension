@@ -25,3 +25,13 @@ var showdown = require('showdown');
 var linkFilter = require('../showdown-intlink-filter').filter;
 var converter = new showdown.Converter({extensions: [linkFilter]});
 ```
+
+## Configuration using Require (via NodeJS or RequireJS)
+
+```javascript
+require('../showdown-intlink-filter').config({
+  pathPrefix : '/images',
+  pathSuffix : '.jpg'
+};
+```
+
