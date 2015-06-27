@@ -1,0 +1,25 @@
+{
+  "name": "showdown-intlink-filter",
+  "description": "Internal link extension for Showdown",
+  "homepage": "https://github.com/vwillyams/showdown-intlink-filter",
+  "authors": [
+    "Victor Willyams"
+  ],
+  "main": [
+    "./showdown-xss-filter.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:vwillyams/showdown-intlink-filter.git"
+  },
+  "keywords": [
+    "markdown",
+    "showdown",
+    "showdown extension",
+    "wiki",
+    "link"
+  ],
+  "license": "MIT",
+  "dependencies": {
+  }
+}

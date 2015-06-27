@@ -1,0 +1,33 @@
+{
+  "name": "showdown-intlink-filter",
+  "version": "0.0.1",
+  "description": "Internal link extension for showdown",
+  "keywords": [
+    "markdown",
+    "showdown",
+    "showdown extension",
+    "wiki",
+    "link"
+  ],
+  "author": "Victor Willyams",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vwillyams/showdown-intlink-filter.git",
+    "web": "https://github.com/vwillyams/showdown-intlink-filter"
+  },
+  "bugs": {
+    "url": "https://github.com/vwillyams/showdown-intlink-filter/issues"
+  },
+  "main": "./showdown-intlink-filter.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "expect.js": "~0.3.1",
+    "mocha": "^2.2.4",
+    "showdown": "~1.0.2"
+  },
+  "scripts": {
+    "test": "mocha"
+  }
+}
