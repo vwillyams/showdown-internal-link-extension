@@ -20,5 +20,13 @@ describe('tests', function() {
       done();
     });
 
+    it("converts more complex wiki text into internal links", function(done) {
+      var markdown = "[[linkMe|link me]]";
+      var converted = converter.makeHtml(markdown);
+
+      expect(converted).to.eql('<p><a href="linkMe">link me</a></p>');
+      done();
+    });
+
   });
 });

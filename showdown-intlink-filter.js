@@ -13,20 +13,20 @@
 
   var linkFilter = function () {
     return [
-      // Simple internal links (no aliasing)
-      {
-        type:    'lang',
-        regex:   '\\[\\[([^\\]\\|\\r\\n]+?)\\]\\]([^\\] ]\\S*)',
-        replace: function (match, link, trailing) {
-            return '<a href="' + config.pathPrefix + link + config.pathSuffix + '">' + link + '</a>' + trailing;
-        }
-      },
       // Aliased internal links
       {
         type:    'lang',
-        regex:   '\\[\\[([^\\]\\|\\r\\n]+?)\\|([^\]\\|\\r\\n]+?)\\]\\]([^\\] ]\\S*)',
-        replace: function (match, link, linkText, trailing) {
-          return '<a href="' + config.pathPrefix + link + config.pathSuffix + '">' + linkText + '</a>' + trailing;
+        regex:   '\\[\\[([^\\]\\|\\r\\n]+?)\\|([^\\]\\|\\r\\n]+?)\\]\\]',
+        replace: function (match, link, linkText) {
+          return '<a href="' + config.pathPrefix + link + config.pathSuffix + '">' + linkText + '</a>';
+        }
+      },
+      // Simple internal links (no aliasing)
+      {
+        type:    'lang',
+        regex:   '\\[\\[([^\\]\\|\\r\\n]+?)\\]\\]',
+        replace: function (match, link) {
+            return '<a href="' + config.pathPrefix + link + config.pathSuffix + '">' + link + '</a>';
         }
       }
     ];
