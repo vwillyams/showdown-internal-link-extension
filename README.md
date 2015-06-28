@@ -13,25 +13,30 @@ Escapes HTML characters and provides the ability to configure how internal links
 ```
 
 ```javascript
-var linkFilter = require('../showdown-intlink-filter').filter;
-var converter = new showdown.Converter({extensions: [linkFilter]});
+var converter = new showdown.Converter({extensions: ['intlink']});
 ```
 
-It is intended that in future the requirement for RequireJS be dropped and configuration of the internal linking can
-be performed elsewhere.
+### Configuration: (note that this will probably change in the near future)
+
+```javascript
+window.Showdown.extensions.intlinkConfig({
+  pathPrefix : '/images/',
+  pathSuffix : '.jpg'
+};
+```
 
 ## Server-side (node)
 
 ```javascript
 var showdown = require('showdown');
-var linkFilter = require('../showdown-intlink-filter').filter;
+var linkFilter = require('../showdown-intlink-filter').intlink;
 var converter = new showdown.Converter({extensions: [linkFilter]});
 ```
 
-## Configuration using Require (via NodeJS or RequireJS)
+### Configuration:
 
 ```javascript
-require('../showdown-intlink-filter').config({
+require('../showdown-intlink-filter').intlinkConfig({
   pathPrefix : '/images/',
   pathSuffix : '.jpg'
 };
