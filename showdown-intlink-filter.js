@@ -55,15 +55,14 @@
     config = cfg;
   }
 
-  // TODO make this work while still allowing configuration
-  //// Client-side export
-  //if (typeof window !== 'undefined' && window.showdown && window.showdown.extensions) {
-  //  window.showdown.extensions.linkFilter = linkFilter;
-  //}
+  // TODO allow for configuration on client side
+  // Client-side export
+  if (typeof window !== 'undefined' && window.showdown && window.showdown.extensions) {
+    window.showdown.extensions.linkFilter = linkFilter;
+  }
 
-  // Server-side export OR requireJS
+  // Server-side export
   if (typeof module !== 'undefined') {
-    module.exports.filter = linkFilter;
-    module.exports.config = configureFilter;
+    module.exports = {filter : linkFilter, config: configureFilter};
   }
 })();
