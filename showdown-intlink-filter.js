@@ -57,10 +57,16 @@
 
   // TODO allow for configuration on client side
   // Client-side export
-  if (typeof window !== 'undefined' && window.Showdown && window.Showdown.extensions) { window.Showdown.extensions.intlink = linkFilter; }
+  if (typeof window !== 'undefined' && window.Showdown && window.Showdown.extensions) {
+    window.Showdown.extensions.intlink = linkFilter; // HEAVY WIZARDRY: extension names have to be lowercase?
+    window.Showdown.extensions.intlinkConfig = configureFilter; // HACK: this means that we can hack this config into here and it cannot be accessed or collide with any real extensions
+  }
 
   // Server-side export
   if (typeof module !== 'undefined') {
-    module.exports = {filter : linkFilter, config: configureFilter};
+    module.exports = {
+      intlink : linkFilter,
+      intLinkConfig: configureFilter
+    };
   }
 })();
