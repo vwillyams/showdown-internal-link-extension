@@ -1,4 +1,4 @@
-# showdown-xss-filter
+# Showdown internal link extension
 
 [Showdown](https://github.com/showdownjs/showdown) extension to allow shorthanded internal links, using Wiki style \[\[link\]\] or \[\[link address\|link name\]\].
 
