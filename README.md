@@ -8,7 +8,6 @@ Escapes HTML characters and provides the ability to configure how internal links
 
 ```html
 <script src="/path/to/showdown/src/showdown.js"></script>
-<script src="/path/to/requirejs/bin/r.js"></script>
 <script src="/path/to/showdown-intlink-filter.js"></script>
 ```
 
