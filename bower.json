@@ -6,7 +6,7 @@
     "Victor Willyams"
   ],
   "main": [
-    "./showdown-xss-filter.js"
+    "./showdown-intlink-filter.js"
   ],
   "repository": {
     "type": "git",
